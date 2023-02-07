@@ -1,0 +1,236 @@
+@import "./variables";
+
+
+#home{
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+header{
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    top: 0;;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 20;
+}
+#navbar{
+    width: 92%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // margin-bottom: 10px;
+    
+    #brand-name{
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+}
+}
+#btn-hambuger{
+    background-color: $btnPrimary;
+    // outline: none;
+    border: 1px solid $btnPrimary;
+    width: 40px;
+    height: 40px;
+    padding: 5px 4px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+#btn-hambuger:hover{
+    cursor: pointer;
+}
+.line{
+    background-color: $btnSecondary;
+    width: 30px;
+    height: 4px;
+    // margin: 5px auto;
+
+    // :first-child{
+    //     margin-top: 7px;
+    // }
+
+    // :last-child{
+    //     margin-bottom: 7px;
+    // }
+}
+
+#menu{
+    border: 1px solid $borderColor;
+    width: 90%;
+    margin-top: 50px;
+    position: absolute;
+    transition: top 10s ease;
+    transition-duration: 10s;
+    display: none;
+    z-index: 10;
+    background-color: #fff;
+
+    ul{
+        padding: 0;
+        margin: auto 10px;
+        // width: 100%;
+    }
+    ul li{
+        list-style: none;
+        padding: 8px;
+        border-bottom: 1px solid $borderColor;
+    }
+    ul li a{
+        text-decoration: none;
+        color: $colorSecondary;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+}
+.home-container{
+    margin-top: 80px;
+}
+#image{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}
+
+#home__main{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 50px auto 0 auto;
+    font-family: 'Poppins', sans-serif;
+    gap: 20px;
+}
+#home__text{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 90%;
+    margin: auto;
+    h4{
+        text-transform: capitalize;
+    }
+}
+#buttons button{
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#buttons__my-work{
+    background-color: $btnPrimary;
+    border: 1px solid $btnPrimary;
+    color: $btnSecondary;
+    margin-right: 10px;
+}
+#buttons__hire-me{
+    background-color: $btnSecondary;
+    color: $btnPrimary;
+    border: 1px solid $btnPrimary;
+}
+
+@media (min-width: 768px) {
+    .home-container{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        height: 85vh;
+        align-items: center;
+    }
+
+    #home{
+        height: 100vh;
+    }
+    #home__main{
+        flex-direction: row;
+        // gap: 30px;
+        // margin: 200px 20px;
+        justify-content: space-between;
+        width: 90%;
+        // height: 70vh;
+        // height: 90vh;
+        // margin: auto 0;
+        margin: unset;
+        align-items: center;
+        // background-color:red;
+        // margin: 10% auto;
+    }
+    #home{
+        min-height: 100vh;
+    }
+}
+
+@media(min-width: 992px){
+    .home-container{
+        justify-content:space-between;
+        align-items:center;
+        height: 100vh;
+    }
+    #home__main{
+        // margin: 20% 0;
+        margin: auto;
+    }
+    #btn-hambuger{
+        display: none;
+    }
+    #navbar{
+        flex-direction: row;
+    }
+    #menu{
+        display: block;
+        position: static;
+        top: unset;
+        border: none;
+        width: auto;
+        margin: unset;
+    }
+    #menu ul{
+        display: flex;
+        flex-direction: row;
+    }
+    #menu ul li{
+        border: none;
+        margin-left: 10px;
+        a{
+            padding: 10px;
+        }
+    }
+}
+
+@media(min-width: 1200px){
+    .home-container{
+        max-width: 1140px;
+        margin-top: 40px;
+    }
+    #home__main{
+        width: 100%;
+        justify-content: space-between;
+        
+    }
+    #image{
+        width: 49%;
+    }
+    
+    #home__text {
+        width: 49%;
+
+        h1{
+            font-size: 50px;
+        }
+        h4{
+            font-size: 20px;
+        }
+    }
+}

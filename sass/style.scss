@@ -1,0 +1,18 @@
+@import "./home";
+@import "./about";
+@import "./variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.show{
+    display: block !important;
+}
